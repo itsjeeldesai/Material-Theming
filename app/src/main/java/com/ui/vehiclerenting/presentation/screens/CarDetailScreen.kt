@@ -105,8 +105,8 @@ fun CarDetailScreen(
                 .fillMaxSize()
                 .verticalScroll(scrollState)
         ) {
-            Spacer(modifier = Modifier.height(imageHeight/*imageHeight - contentOverlap*/))
-            CarDetailsContent(selectedCar /*Modifier.offset(y = -contentOverlap)*/)
+            Spacer(modifier = Modifier.height(imageHeight))
+            CarDetailsContent(selectedCar)
         }
 
         // Image
@@ -130,9 +130,9 @@ fun CarDetailScreen(
 }
 
 @Composable
-fun CarDetailsContent(car: CarDetails /*modifier: Modifier*/) {
+fun CarDetailsContent(car: CarDetails) {
     Column(
-        modifier = Modifier/*modifier*/
+        modifier = Modifier
             .fillMaxWidth()
             .background(MaterialTheme.colorScheme.surface)
             .padding(16.dp)
@@ -197,9 +197,8 @@ fun CarHeader(car: CarDetails) {
     }
 }
 
-
 @Composable
-fun RatingBox(rating: String, backgroundColor : Color) {
+fun RatingBox(rating: String, backgroundColor: Color) {
     Box(
         modifier = Modifier
             .clip(RoundedCornerShape(36))
@@ -227,13 +226,15 @@ fun RatingBox(rating: String, backgroundColor : Color) {
     }
 }
 
-
 @Composable
 fun SpecificationsCard() {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .border(BorderStroke(1.dp , MaterialTheme.colorScheme.surfaceVariant), RoundedCornerShape(12))
+            .border(
+                BorderStroke(1.dp, MaterialTheme.colorScheme.surfaceVariant),
+                RoundedCornerShape(12)
+            )
             .clip(RoundedCornerShape(12)),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
@@ -348,7 +349,10 @@ fun OwnerInfoCard() {
 fun OwnerDetailsCard(modifier: Modifier = Modifier) {
     Card(
         modifier = modifier
-            .border(BorderStroke(1.dp, MaterialTheme.colorScheme.surfaceVariant), RoundedCornerShape(12))
+            .border(
+                BorderStroke(1.dp, MaterialTheme.colorScheme.surfaceVariant),
+                RoundedCornerShape(12)
+            )
             .clip(RoundedCornerShape(12)),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
@@ -365,6 +369,7 @@ fun OwnerDetailsCard(modifier: Modifier = Modifier) {
 @Composable
 fun OwnerInfo() {
     Row(verticalAlignment = Alignment.CenterVertically) {
+
         Image(
             painter = painterResource(id = R.drawable.owner),
             contentDescription = "Owner",
@@ -379,7 +384,7 @@ fun OwnerInfo() {
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
-//            Spacer(modifier = Modifier.height(2.dp))
+
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(
                     painter = painterResource(id = R.drawable.medal_star),
@@ -401,7 +406,7 @@ fun OwnerInfo() {
 }
 
 @Composable
-fun InfoChipDetails(icon: Int, text: String, chipColor : Color) {
+fun InfoChipDetails(icon: Int, text: String, chipColor: Color) {
     Box(
         modifier = Modifier
             .clip(CircleShape)
@@ -448,7 +453,10 @@ fun OwnerStats() {
 fun MapCard(modifier: Modifier = Modifier) {
     Card(
         modifier = modifier
-            .border(BorderStroke(1.dp, MaterialTheme.colorScheme.surfaceVariant), RoundedCornerShape(12))
+            .border(
+                BorderStroke(1.dp, MaterialTheme.colorScheme.surfaceVariant),
+                RoundedCornerShape(12)
+            )
             .clip(RoundedCornerShape(12)),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
@@ -494,13 +502,15 @@ fun MapCard(modifier: Modifier = Modifier) {
     }
 }
 
-
 @Composable
 fun TravelDateRangeCard() {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .border(BorderStroke(1.dp, MaterialTheme.colorScheme.surfaceVariant), RoundedCornerShape(12)),
+            .border(
+                BorderStroke(1.dp, MaterialTheme.colorScheme.surfaceVariant),
+                RoundedCornerShape(12)
+            ),
         shape = RoundedCornerShape(12),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
@@ -590,7 +600,6 @@ private fun DateDivider() {
     }
 }
 
-
 @Composable
 fun TripLocationCard() {
     Row(
@@ -639,7 +648,6 @@ fun TripLocationCard() {
         }
     }
 }
-
 
 @Composable
 fun CancellationCard() {
@@ -707,8 +715,6 @@ fun RatingsAndReviewsCard(
                 text = "Ratings & Reviews",
             )
 
-//            Spacer(modifier = Modifier.height(6.dp))
-
             RatingsHeader(
                 overallRating = overallRating,
                 totalReviews = totalReviews,
@@ -724,7 +730,6 @@ fun RatingsAndReviewsCard(
         }
     }
 }
-
 
 @Composable
 fun RatingsHeader(
@@ -758,7 +763,7 @@ fun RatingsHeader(
                 fontWeight = FontWeight.Bold
             )
         }
-        IconButton(onClick = onExpandClick ) {
+        IconButton(onClick = onExpandClick) {
             Icon(
                 imageVector = if (isExpanded) Icons.Default.KeyboardArrowUp else Icons.Default.KeyboardArrowDown,
                 contentDescription = if (isExpanded) "Collapse" else "Expand"
@@ -766,7 +771,6 @@ fun RatingsHeader(
         }
     }
 }
-
 
 @Composable
 fun CategoryRatings(categoryRatings: Map<String, Float>) {
@@ -836,14 +840,37 @@ fun Pill(fillPercentage: Float, modifier: Modifier = Modifier) {
     }
 }
 
-
 @Composable
 fun ClientReviews() {
     val fakeReviews = listOf(
-        Review("David Harris", "May 28, 2023", 4.9f, "John was absolutely great in communicating & vehicle is super reliable. Totally will book again in the future.", "https://media.assettype.com/esakal%2F2023-05%2F1666f23e-85d9-4cbe-9889-981636615514%2F1.jpg"),
-        Review("Sarah Johnson", "June 15, 2023", 4.7f, "Great experience! The car was clean and in perfect condition.", "https://media.assettype.com/esakal%2F2023-05%2F1666f23e-85d9-4cbe-9889-981636615514%2F1.jpg"),
-        Review("Michael Brown", "July 3, 2023", 4.8f, "Smooth rental process and excellent communication.", "https://media.assettype.com/esakal%2F2023-05%2F1666f23e-85d9-4cbe-9889-981636615514%2F1.jpg"),
-        Review("Emily Davis", "July 20, 2023", 4.6f, "The car was fantastic for our trip. Would definitely rent again!", "https://media.assettype.com/esakal%2F2023-05%2F1666f23e-85d9-4cbe-9889-981636615514%2F1.jpg")
+        Review(
+            "David Harris",
+            "May 28, 2023",
+            4.9f,
+            "John was absolutely great in communicating & vehicle is super reliable. Totally will book again in the future.",
+            "https://media.assettype.com/esakal%2F2023-05%2F1666f23e-85d9-4cbe-9889-981636615514%2F1.jpg"
+        ),
+        Review(
+            "Sarah Johnson",
+            "June 15, 2023",
+            4.7f,
+            "Great experience! The car was clean and in perfect condition.",
+            "https://media.assettype.com/esakal%2F2023-05%2F1666f23e-85d9-4cbe-9889-981636615514%2F1.jpg"
+        ),
+        Review(
+            "Michael Brown",
+            "July 3, 2023",
+            4.8f,
+            "Smooth rental process and excellent communication.",
+            "https://media.assettype.com/esakal%2F2023-05%2F1666f23e-85d9-4cbe-9889-981636615514%2F1.jpg"
+        ),
+        Review(
+            "Emily Davis",
+            "July 20, 2023",
+            4.6f,
+            "The car was fantastic for our trip. Would definitely rent again!",
+            "https://media.assettype.com/esakal%2F2023-05%2F1666f23e-85d9-4cbe-9889-981636615514%2F1.jpg"
+        )
     )
 
     Box(modifier = Modifier.fillMaxWidth()) {
@@ -915,7 +942,7 @@ fun ReviewCard(review: Review) {
                     )
                 }
                 Spacer(modifier = Modifier.weight(1f))
-                RatingBox(rating = review.rating.toString(),MaterialTheme.colorScheme.surface)
+                RatingBox(rating = review.rating.toString(), MaterialTheme.colorScheme.surface)
             }
             Spacer(modifier = Modifier.height(8.dp))
             Text(

@@ -13,7 +13,6 @@ class CategoryRepositoryImpl(private val dataSource: DataSource) : CategoryRepos
 }
 
 // For Car Details from JSON
-
 interface CarDetailsRepository {
     suspend fun getCarDetails(context: Context): CarDetailsResponse
 }

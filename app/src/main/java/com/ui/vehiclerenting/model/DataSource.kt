@@ -5,16 +5,13 @@ import java.io.IOException
 
 class DataSource {
 
-
-//    Car Categories
-
+    //    Car Categories
     fun fetchCategories(context: Context): CategoryResponse {
         val jsonString = loadJsonFromAssets(context, "categories.json")
         return parseJson(jsonString ?: "")
     }
 
-//    Car Details
-
+    //    Car Details
     fun fetchCarDetails(context: Context): CarDetailsResponse {
         val jsonString = loadJsonFromAssets(context, "carDetails.json")
         return parseCarDetailsJson(jsonString ?: "")

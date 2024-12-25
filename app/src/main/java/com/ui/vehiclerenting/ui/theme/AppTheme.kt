@@ -12,22 +12,6 @@ data class AppTheme(
 
 val LocalAppTheme = compositionLocalOf<AppTheme> { error("AppTheme not provided") }
 
-/*
-@Composable
-fun useAppColors(): ColorScheme {
-    val appTheme = LocalAppTheme.current
-    return if (appTheme.isDynamicColorEnabled) {
-        appTheme.mainColorScheme
-    } else {
-        appTheme.grayColorScheme
-    }
-}
-*/
-
-/*val ColorScheme.blueGray: ColorScheme // to access the colorscheme like : MaterialTheme.colorscheme.blueGray...
-    @Composable
-    get() = LocalAppTheme.current.grayColorScheme*/
-
 @Composable
 fun grayColorScheme(): ColorScheme = LocalAppTheme.current.grayColorScheme
 

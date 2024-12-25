@@ -64,7 +64,6 @@ import com.ui.vehiclerenting.presentation.viewmodels.AppSettingsViewModel
 import com.ui.vehiclerenting.ui.theme.grayColorScheme
 import com.ui.vehiclerenting.ui.theme.useAppColors
 
-
 @RequiresApi(Build.VERSION_CODES.TIRAMISU)
 @Composable
 fun CustomNavigationBar() {
@@ -131,7 +130,11 @@ fun NavGraph(
     NavHost(navController = navController, startDestination = NavRoute.Home.route) {
         composable(NavRoute.Home.route) {
             showBottomBar.value = true
-            HomeScreen(navController = navController, paddingValues =  paddingValues, viewModel = viewModel )
+            HomeScreen(
+                navController = navController,
+                paddingValues = paddingValues,
+                viewModel = viewModel
+            )
         }
         composable(NavRoute.Favourite.route) {
             showBottomBar.value = true

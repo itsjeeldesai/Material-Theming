@@ -84,7 +84,6 @@ fun HomeScreen(
     navController: NavHostController,
     paddingValues: PaddingValues
 ) {
-
     val useDynamicColor by viewModel.useDynamicColor
     val context = LocalContext.current
     val categoryViewModel: CategoryViewModel = viewModel(
