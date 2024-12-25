@@ -1,0 +1,94 @@
+{
+  "carDetails": [
+    {
+      "imageResource": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "validityText": "Unlimited Miles",
+      "ratingText": "5.0",
+      "nameText": "Porsche Panamera Turbo 2018",
+      "tripsText": "91",
+      "locationText": "San Francisco",
+      "priceText": "$149/Day",
+      "type": "Sports"
+    },
+    {
+      "imageResource": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "validityText": "Unlimited Miles",
+      "ratingText": "5.0",
+      "nameText": "BMW 330d M 2016",
+      "tripsText": "160",
+      "locationText": "San Francisco",
+      "priceText": "$79/Day",
+      "type": "Sports"
+    },
+    {
+      "imageResource": "https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "validityText": "Unlimited Miles",
+      "ratingText": "5.0",
+      "nameText": "Alpha Romeo 4C 2015",
+      "tripsText": "88",
+      "locationText": "San Francisco",
+      "priceText": "$79/Day",
+      "type": "Sports"
+    },
+    {
+      "imageResource": "https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "validityText": "Unlimited Miles",
+      "ratingText": "5.0",
+      "nameText": "Audi A5 2016",
+      "tripsText": "91",
+      "locationText": "San Francisco",
+      "priceText": "$75/Day",
+      "type": "Sports"
+    },
+    {
+      "imageResource": "https://images.pexels.com/photos/119435/pexels-photo-119435.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "validityText": "Unlimited Miles",
+      "ratingText": "5.0",
+      "nameText": "Jeep Grand Cherokee 2023",
+      "tripsText": "160",
+      "locationText": "San Francisco",
+      "priceText": "$89/Day",
+      "type": "SUV"
+    },
+    {
+      "imageResource": "https://images.pexels.com/photos/1335077/pexels-photo-1335077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "validityText": "Unlimited Miles",
+      "ratingText": "5.0",
+      "nameText": "Mercedes SLK 55 2012",
+      "tripsText": "188",
+      "locationText": "San Francisco",
+      "priceText": "$79/Day",
+      "type": "Convertible"
+    },
+    {
+      "imageResource": "https://images.pexels.com/photos/1007410/pexels-photo-1007410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "validityText": "Unlimited Miles",
+      "ratingText": "5.0",
+      "nameText": "Ford Focus 2014",
+      "tripsText": "239",
+      "locationText": "San Francisco",
+      "priceText": "$31/Day",
+      "type": "Hatchback"
+    },
+    {
+      "imageResource": "https://images.pexels.com/photos/1638459/pexels-photo-1638459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "validityText": "Unlimited Miles",
+      "ratingText": "5.0",
+      "nameText": "Jeep Wrangler 2017",
+      "tripsText": "60",
+      "locationText": "San Francisco",
+      "priceText": "$79/Day",
+      "type": "SUV"
+    },
+    {
+      "imageResource": "https://images.pexels.com/photos/112452/pexels-photo-112452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "validityText": "Unlimited Miles",
+      "ratingText": "5.0",
+      "nameText": "Mercedes AMG GT 2016",
+      "tripsText": "65",
+      "locationText": "San Francisco",
+      "priceText": "$119/Day",
+      "type": "Sports"
+    }
+  ]
+}

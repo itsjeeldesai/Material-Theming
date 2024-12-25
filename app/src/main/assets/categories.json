@@ -1,0 +1,15 @@
+{
+  "categories": [
+    { "index": 0, "name": "All" },
+    { "index": 1, "name": "Hatchback" },
+    { "index": 2, "name": "Sedan" },
+    { "index": 3, "name": "SUV" },
+    { "index": 4, "name": "MPV" },
+    { "index": 5, "name": "Compact SUV" },
+    { "index": 6, "name": "Sports" },
+    { "index": 7, "name": "Convertible" },
+    { "index": 8, "name": "Truck" },
+    { "index": 9, "name": "Bike" },
+    { "index": 10, "name": "Pickup" }
+  ]
+}
