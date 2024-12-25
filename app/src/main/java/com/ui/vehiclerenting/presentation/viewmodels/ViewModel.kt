@@ -54,10 +54,13 @@ class CategoryViewModel(
     }
 
     fun getFilteredCarDetails(): List<CarDetails> {
-        return when (val selectedIndex = _selectedCategoryIndex.value) {
-            null -> _details.value
-            0 -> _details.value
-            else -> _details.value.filter { it.type.equals(_categories.value[selectedIndex].name, ignoreCase = true) }
+        val selectedIndex = _selectedCategoryIndex.value
+        return if (selectedIndex == null || selectedIndex == 0) {
+            _details.value
+        } else {
+            _details.value.filter {
+                it.type.equals(_categories.value[selectedIndex].name, ignoreCase = true)
+            }
         }
     }
 }
