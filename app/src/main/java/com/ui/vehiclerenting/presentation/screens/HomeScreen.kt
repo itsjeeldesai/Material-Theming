@@ -77,6 +77,7 @@ import com.ui.vehiclerenting.presentation.viewmodels.CategoryViewModel
 import com.ui.vehiclerenting.presentation.viewmodels.ViewModelFactory
 import com.ui.vehiclerenting.ui.theme.grayColorScheme
 import com.ui.vehiclerenting.ui.theme.useAppColors
+import androidx.compose.ui.res.stringResource
 
 @Composable
 fun HomeScreen(
@@ -146,7 +147,7 @@ fun HomeScreen(
                         },
                         placeholder = {
                             Text(
-                                text = "City, airport, address or hotel etc.",
+                                text = stringResource(R.string.search_hint),
                                 fontSize = 14.sp,
                                 overflow = TextOverflow.Ellipsis,
                                 maxLines = 1
@@ -227,9 +228,9 @@ fun HomeScreen(
                         verticalArrangement = Arrangement.spacedBy(8.dp),
                         modifier = Modifier.weight(4f)
                     ) {
-                        Text(text = "Hii, Joseph", color = MaterialTheme.colorScheme.secondary)
+                        Text(text = stringResource(R.string.greeting), color = MaterialTheme.colorScheme.secondary)
                         Text(
-                            text = "Find Your Ideal Drive",
+                            text = stringResource(R.string.find_drive),
                             fontSize = 22.sp,
                             fontWeight = FontWeight.SemiBold
                         )
@@ -316,7 +317,7 @@ fun HomeScreen(
                         .padding(16.dp)
                 ) {
                     Text(
-                        text = "There are currently no cars available in this category.",
+                        text = stringResource(R.string.no_cars),
                         textAlign = TextAlign.Center
                     )
                 }
@@ -516,7 +517,7 @@ fun CarCard(
                         shape = RoundedCornerShape(36)
                     ) {
                         Text(
-                            text = "Book Now",
+                            text = stringResource(R.string.book_now),
                             color = MaterialTheme.colorScheme.onPrimary
                         )
                     }

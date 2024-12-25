@@ -1,3 +1,55 @@
 <resources>
     <string name="app_name">Vehicle Renting</string>
+
+    <!-- Home Screen -->
+    <string name="search_hint">City, airport, address or hotel etc.</string>
+    <string name="greeting">Hii, Joseph</string>
+    <string name="find_drive">Find Your Ideal Drive</string>
+    <string name="no_cars">There are currently no cars available in this category.</string>
+    <string name="book_now">Book Now</string>
+
+    <!-- Car Details Screen -->
+    <string name="specifications">Specifications</string>
+    <string name="places">Places</string>
+    <string name="seats">4 Seats</string>
+    <string name="top_speed">Top speed</string>
+    <string name="speed_value">320 km/h</string>
+    <string name="transmission">Transmission</string>
+    <string name="transmission_type">Automatic</string>
+    <string name="fuel_type">Fuel type</string>
+    <string name="fuel_value">Petrol</string>
+    <string name="owner_info">Owner Info.</string>
+    <string name="owner_name">John Smith</string>
+    <string name="star_host">Star host</string>
+    <string name="trips_count">91 trips</string>
+    <string name="location_san_francisco">San Francisco</string>
+    <string name="car_location">Car Location</string>
+    <string name="trip_date_timing">Trip Date &amp; Timing</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="date_from">18th July, 2024</string>
+    <string name="time_from">10:00 AM</string>
+    <string name="date_to">22nd July, 2024</string>
+    <string name="time_to">05:30 PM</string>
+    <string name="trip_location">Trip Location</string>
+    <string name="address">West Men lo Park, Random Street, Random Town, CA 83265, USA</string>
+    <string name="free_cancellation">FREE Cancellation</string>
+    <string name="refund_text">Full refund before 17th July, 10:00 AM</string>
+    <string name="ratings_reviews">Ratings &amp; Reviews</string>
+    <string name="reviews_count">%1$d Reviews</string>
+    <string name="see_all_reviews">See all reviews</string>
+    <string name="client_reviews">Client Reviews</string>
+
+    <!-- Favourite Screen -->
+    <string name="favourite_screen">Favourite Screen</string>
+
+    <!-- Trips Screen -->
+    <string name="trips_screen">Trips Screen</string>
+
+    <!-- Message Screen -->
+    <string name="messages_screen">Messages Screen</string>
+
+    <!-- Profile Screen -->
+    <string name="profile_screen">Profile Screen</string>
+
 </resources>

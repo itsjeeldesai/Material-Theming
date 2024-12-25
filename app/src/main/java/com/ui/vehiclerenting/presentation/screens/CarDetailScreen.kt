@@ -55,6 +55,7 @@ import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -74,7 +75,9 @@ import com.ui.vehiclerenting.model.DataSource
 import com.ui.vehiclerenting.model.Review
 import com.ui.vehiclerenting.presentation.viewmodels.CategoryViewModel
 import com.ui.vehiclerenting.presentation.viewmodels.ViewModelFactory
+import java.util.Locale
 import kotlin.math.max
+
 
 @Composable
 fun CarDetailScreen(
@@ -240,7 +243,7 @@ fun SpecificationsCard() {
     ) {
         Column {
             Text(
-                text = "Specifications",
+                text = stringResource(R.string.specifications),
                 modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp)
             )
             SpecificationRow(
@@ -357,7 +360,7 @@ fun OwnerDetailsCard(modifier: Modifier = Modifier) {
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
         Column(Modifier.padding(12.dp)) {
-            Text(text = "Owner Info.")
+            Text(text = stringResource(R.string.owner_info))
             Spacer(modifier = Modifier.height(8.dp))
             OwnerInfo()
             Spacer(modifier = Modifier.height(8.dp))
@@ -378,7 +381,7 @@ fun OwnerInfo() {
         Spacer(modifier = Modifier.width(8.dp))
         Column {
             Text(
-                text = "John Smith",
+                text = stringResource(R.string.owner_name),
                 style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
                 color = MaterialTheme.colorScheme.onBackground,
                 maxLines = 1,
@@ -394,7 +397,7 @@ fun OwnerInfo() {
                 )
                 Spacer(modifier = Modifier.width(4.dp))
                 Text(
-                    text = "Star host",
+                    text = stringResource(R.string.star_host),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onBackground,
                     maxLines = 1,
@@ -437,13 +440,13 @@ fun OwnerStats() {
     Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
         InfoChipDetails(
             icon = R.drawable.destination,
-            text = "91 trips",
+            text = stringResource(R.string.trips_count),
             MaterialTheme.colorScheme.secondaryContainer
         )
         Spacer(modifier = Modifier.width(4.dp))
         InfoChipDetails(
             icon = R.drawable.location,
-            text = "San Francisco",
+            text = stringResource(R.string.location_san_francisco),
             MaterialTheme.colorScheme.secondaryContainer
         )
     }
@@ -491,7 +494,7 @@ fun MapCard(modifier: Modifier = Modifier) {
 
             // Text overlay
             Text(
-                text = "Car Location",
+                text = stringResource(R.string.car_location),
                 modifier = Modifier
                     .padding(8.dp)
                     .padding(4.dp),
@@ -516,7 +519,7 @@ fun TravelDateRangeCard() {
     ) {
         Column(modifier = Modifier.padding(12.dp)) {
             Text(
-                text = "Trip Date & Timing",
+                text = stringResource(R.string.trip_date_timing),
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             Row(
@@ -614,7 +617,7 @@ fun TripLocationCard() {
             horizontalAlignment = Alignment.Start
         ) {
             Text(
-                text = "Trip Location",
+                text = stringResource(R.string.trip_location),
                 color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
@@ -637,7 +640,7 @@ fun TripLocationCard() {
                 )
 
                 Text(
-                    text = "West Men lo Park, Random Street, Random Town, CA 83265, USA",
+                    text = stringResource(R.string.address),
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Bold,
                     maxLines = 2,
@@ -677,13 +680,13 @@ fun CancellationCard() {
 
         Column {
             Text(
-                text = "FREE Cancellation",
+                text = stringResource(R.string.free_cancellation),
                 style = MaterialTheme.typography.titleSmall,
                 fontWeight = FontWeight.Bold,
             )
             Spacer(modifier = Modifier.height(4.dp))
             Text(
-                text = "Full refund before 17th July, 10:00 AM",
+                text = stringResource(R.string.refund_text),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 style = MaterialTheme.typography.bodyMedium,
@@ -712,7 +715,7 @@ fun RatingsAndReviewsCard(
         Column(modifier = Modifier.padding(12.dp)) {
 
             Text(
-                text = "Ratings & Reviews",
+                text = stringResource(R.string.ratings_reviews),
             )
 
             RatingsHeader(
@@ -801,11 +804,12 @@ fun CategoryRatingItem(category: String, rating: Float) {
             modifier = Modifier.weight(1f)
         )
         Text(
-            text = String.format("%.1f", rating),
+            text = String.format(Locale.getDefault(), "%.1f", rating),
             modifier = Modifier.width(30.dp),
             textAlign = TextAlign.End,
             style = MaterialTheme.typography.bodyMedium
         )
+
     }
 }
 
@@ -876,7 +880,7 @@ fun ClientReviews() {
     Box(modifier = Modifier.fillMaxWidth()) {
         Column {
             Text(
-                text = "Client Reviews",
+                text = stringResource(R.string.client_reviews),
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
@@ -891,7 +895,7 @@ fun ClientReviews() {
         }
 
         Text(
-            text = "See all reviews",
+            text = stringResource(R.string.see_all_reviews),
             textAlign = TextAlign.End,
             color = MaterialTheme.colorScheme.tertiary,
             style = MaterialTheme.typography.bodyMedium,

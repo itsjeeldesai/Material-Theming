@@ -1,8 +1,6 @@
 package com.ui.vehiclerenting.presentation.navigation
 
 import android.app.Activity
-import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.FastOutSlowInEasing
@@ -64,7 +62,6 @@ import com.ui.vehiclerenting.presentation.viewmodels.AppSettingsViewModel
 import com.ui.vehiclerenting.ui.theme.grayColorScheme
 import com.ui.vehiclerenting.ui.theme.useAppColors
 
-@RequiresApi(Build.VERSION_CODES.TIRAMISU)
 @Composable
 fun CustomNavigationBar() {
 
@@ -119,7 +116,6 @@ fun CustomNavigationBar() {
     }
 }
 
-@RequiresApi(Build.VERSION_CODES.TIRAMISU)
 @Composable
 fun NavGraph(
     navController: NavHostController,
